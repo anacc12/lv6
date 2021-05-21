@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	form#formAddProject(name="addproject",method="post",action="/projects") 
+		p Naziv: 
+			input#inputName(type="text", placeholder="ex. John Smith", name="naziv")
+		p Opis:
+			input#inputBadge(type="text", placeholder="ex. 123456", name="opis")
+		p Obavljeni poslovi: 
+			input#inputName(type="text", placeholder="ex. John Smith", name="obavljeno")
+		p Cijena:
+			input#inputBadge(type="number", placeholder="ex. 123456", name="cijena")
+		p Početak: 
+			input#inputName(type="date", placeholder="ex. John Smith", name="pocetak")
+		p Završetak:
+			input#inputBadge(type="date", placeholder="ex. 123456", name="zavrsetak")
+		p Članovi:
+			input#inputBadge(type="text", placeholder="ex. 123456", name="clanovi")
+		p
+			button#btnSubmit(type="submit") submit
